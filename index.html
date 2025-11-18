@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>الأخبار</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- سبلاش -->
+  <div id="splash">
+    <div class="loader"></div>
+    <p>جاري التحميل...</p>
+  </div>
+
+  <!-- هيدر -->
+  <header id="header">
+    <h1>الأخبار</h1>
+    <div class="top-buttons" aria-hidden="false">
+      <button id="themeToggle" title="وضع">🌙</button>
+      <button id="fontPlus" title="تكبير الخط">A+</button>
+      <button id="fontMinus" title="تصغير الخط">A-</button>
+      <button id="refreshBtn" title="تحديث">🔄</button>
+    </div>
+  </header>
+
+  <!-- تبويبات -->
+  <nav>
+    <button class="tab active" data-tab="politics">الأخبار السياسية</button>
+    <button class="tab" data-tab="youtube">أخبار يوتيوب</button>
+    <button class="tab" data-tab="favorites">المفضلة</button>
+  </nav>
+
+  <!-- محتوى -->
+  <main>
+    <section id="politics" class="tab-content active" aria-live="polite"></section>
+    <section id="youtube" class="tab-content" aria-live="polite"></section>
+    <section id="favorites" class="tab-content" aria-live="polite"></section>
+
+    <!-- صفحة قراءة الخبر / مشغل -->
+    <section id="articlePage" class="hidden" aria-hidden="true">
+      <button id="closeArticle">رجوع</button>
+      <div id="articleContent"></div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 جميع الحقوق محفوظة لـِ مهند ظاهر
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
