@@ -1,0 +1,50 @@
+:root{
+  --bg:#ffffff; --text:#111; --card:#f6f8fb; --accent:#0b84ff;
+  --muted: rgba(0,0,0,0.6);
+}
+.dark { --bg:#0f1113; --text:#eee; --card:#181a1b; --accent:#1a73e8; --muted: rgba(255,255,255,0.7); }
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Tajawal, Tahoma, Arial, sans-serif; background:var(--bg); color:var(--text); direction:rtl; font-size:16px; transition:background .18s,color .18s}
+#header{background:var(--accent); color:#fff; padding:12px 14px; display:flex; justify-content:space-between; align-items:center}
+.top-buttons button{margin-left:8px;padding:6px 8px;border-radius:8px;border:0;background:rgba(255,255,255,0.12);color:#fff;cursor:pointer}
+nav{display:flex;background:var(--accent);position:sticky;top:0;z-index:10}
+nav button{flex:1;padding:12px;border:0;background:transparent;color:#fff;cursor:pointer;font-weight:600}
+nav button.active{background:rgba(255,255,255,0.18)}
+main{padding:12px}
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* بطاقة */
+.card{background:var(--card);border-radius:12px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(0,0,0,0.04)}
+.card img{width:100%;height:auto;display:block;object-fit:cover}
+.card-body{padding:12px}
+.card h3{margin:0 0 6px;font-size:17px}
+.card p{margin:0;color:var(--muted);line-height:1.45}
+
+/* أسفل البطاقة */
+.card-buttons{display:flex;justify-content:space-between;align-items:center;padding:10px}
+.action-btn{padding:8px 12px;border:0;border-radius:8px;background:var(--accent);color:#fff;cursor:pointer}
+.favorite-btn{width:44px;height:44px;border-radius:50%;border:0;background:#fff;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+.favorite-btn.active{background:gold}
+
+/* صفحة المقال / مشغل */
+#articlePage{padding:12px}
+#articlePage.hidden{display:none}
+#closeArticle{display:inline-block;margin-bottom:10px;padding:8px 10px;border-radius:8px;border:0;background:var(--accent);color:#fff;cursor:pointer}
+.youtube-player{width:100%;aspect-ratio:16/9;border-radius:10px;background:#000;display:block}
+
+/* سبلاش */
+#splash{position:fixed;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;background:var(--bg);z-index:9999}
+.loader{width:46px;height:46px;border:5px solid #e6e6e6;border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+#splash p{margin-top:10px;color:var(--muted)}
+
+/* فوتر */
+footer{text-align:center;padding:12px;opacity:0.85;font-size:13px}
+
+/* استجابة */
+@media(min-width:900px){
+  main{max-width:900px;margin:0 auto}
+}
